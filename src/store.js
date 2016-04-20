@@ -80,9 +80,12 @@ document.dispatch = function(action){
       break;
   }
   if(s.mob.hp <= 0)
-    alert('Вы выйграли')
+    alert('Вы выиграли')
   if(s.player.hp <= 0)
     alert('Вы проиграли')
+
+  if (s.mob.hp <= 0 || s.player.hp <= 0)
+    window.location.reload()
   //decrement current ability durations
   if (s.player.abilities[ability_types.HITS]) --(s.player.abilities[ability_types.HITS])
   if (s.player.abilities[ability_types.DAMAGE_IMPROVE]) --(s.player.abilities[ability_types.DAMAGE_IMPROVE])
